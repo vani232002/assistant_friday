@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Roboto:ital,wght@1,100&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins';
+}
+
+body{
+  background-color: blue;
+  }
+
+.login-section{
+  border: 2px solid #ff0000;
+  height: 490px;
+  width: 400px;
+  position : absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  }
+
+.login-section:hover{
+box-shadow: 0 0 60px #ff0000;
+}
+
+.login-section .formbox{
+position: absolutue;
+display: flex;
+justify-content: center;
+align-items; center;
+height: 100%;
+width: 100%;
+}

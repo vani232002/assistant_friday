@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artificial Intelligence</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .section {
+           width: 300px;
+            height: 200px;
+            background-color: black;
+            padding: 20px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .section:hover {
+            transform: scale(1.1);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 16px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .section:nth-child(odd) {
+            animation: slideLeft 1s ease infinite alternate;
+        }
+
+        .section:nth-child(even) {
+            animation: slideRight 1s ease infinite alternate;
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-20px);
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+    </style>
+   <script>
+        function redirectToFriday() {
+            window.location.href = "friday.html";
+        }
+        function redirectToSiya()
+        {
+        window.location.href="siya.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="C:\Users\HP\Downloads\pexels-yaroslav-shuraev-8464662-3840x2160-25fps.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+
+            <div class="section" onclick="redirectToFriday()">
+            <h2 style="color: #FF0000;">FRIDAY</h2>
+
+            <p style="color: #FF0000;">Voice Assistant</p>
+        </div>
+
+        <div class="section" onclick="redirectToSiya()">
+            <h2 style="color: #FF0000;">SIYA</h2>
+
+            <p style="color: #FF0000;">Chat Bot</p>
+        </div>
+    </div>
+</body>
+</html>
